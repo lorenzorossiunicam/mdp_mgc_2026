@@ -22,8 +22,8 @@ dependencies {
     // This dependency is used by the application.
     implementation(libs.guava)
 
-    implementation("org.projectlombok:lombok:1.18.36")
-    //annotationProcessor("org.projectlombok:lombok:1.18.36")
+    implementation("org.projectlombok:lombok:1.18.44")
+    annotationProcessor("org.projectlombok:lombok:1.18.44")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -35,5 +35,5 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "it.unicam.mdp_mgc_2026.App"
+    mainClass = "it.unicam.mdp_mgc_2026.annotations.MainAnnotations"
 }

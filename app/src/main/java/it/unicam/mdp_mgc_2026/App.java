@@ -3,6 +3,8 @@
  */
 package it.unicam.mdp_mgc_2026;
 
+import it.unicam.mdp_mgc_2026.annotations.MainAnnotations;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
