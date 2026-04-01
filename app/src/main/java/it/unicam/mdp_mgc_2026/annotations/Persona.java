@@ -1,6 +1,7 @@
 package it.unicam.mdp_mgc_2026.annotations;
 
 
+import it.unicam.mdp_mgc_2026.palla8.Palla8;
 import lombok.NonNull;
 
 import java.io.Serializable;
@@ -18,6 +19,7 @@ public class Persona extends Entita implements Serializable {
     private static final long serialVersionUID = 1L;
     private int eta;
     private String nome, cognome, cf;
+
 
 
     /**
@@ -70,4 +72,22 @@ public class Persona extends Entita implements Serializable {
     public void setEta(int eta){
         this.eta = eta;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public String getCf() {
+        return cf;
+    }
+
+    public int getEta() {
+        return eta;
+    }
 }
+
+

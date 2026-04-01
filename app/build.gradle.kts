@@ -24,6 +24,8 @@ dependencies {
 
     implementation("org.projectlombok:lombok:1.18.44")
     annotationProcessor("org.projectlombok:lombok:1.18.44")
+
+    implementation("com.google.code.gson:gson:2.13.2")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -35,5 +37,5 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "it.unicam.mdp_mgc_2026.annotations.MainAnnotations"
+    mainClass = "it.unicam.mdp_mgc_2026.persistence.serialize.MainSerialize"
 }
