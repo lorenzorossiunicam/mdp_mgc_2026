@@ -70,6 +70,7 @@ public class Saporita {
     private void createMenu(NodeList piatti) {
         for (int i = 0; i<piatti.getLength(); i++){
             Node n = piatti.item(i);
+            //System.out.println(piatti.item(i).getNodeName());
             if (!(n.getNodeName().equals("primo") || n.getNodeName().equals("secondo"))){
                 continue;
             }

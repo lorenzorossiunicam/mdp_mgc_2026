@@ -3,10 +3,11 @@ package it.unicam.mdp_mgc_2026.persistence.xml.dom.saporita;
 import java.util.*;
 
 public class Menu {
-    private Map<String,Piatto> piatti = new HashMap<>();
+    private Map<String,Piatto> piatti;
     private MenuDelGiorno mdg;
 
     public Menu(){
+        piatti = new HashMap<>();
     }
 
     public Menu(Map<String,Piatto> piatti){
@@ -26,7 +27,7 @@ public class Menu {
     }
 
     public int addPiatto(Piatto p){
-        if (piatti.keySet().contains(p.getId())){
+        if (piatti.values().contains(p)) {
             return -1;
         }
         piatti.put(p.getId(),p);
@@ -73,9 +74,11 @@ public class Menu {
             this.data = data;
             this.piatti = piatti;
         }
+
         public Date getData() {
             return data;
         }
+
         public Set<String> getPiatti() {
             return piatti;
         }

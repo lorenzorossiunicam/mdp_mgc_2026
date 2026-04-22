@@ -1,5 +1,7 @@
 package it.unicam.mdp_mgc_2026.persistence.xml.dom.saporita;
 
+import java.util.Objects;
+
 public class Piatto {
 
     private String nome;
@@ -13,6 +15,18 @@ public class Piatto {
         this.prezzo = prezzo;
         this.descrizione = descrizione;
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Piatto piatto = (Piatto) o;
+        return Objects.equals(id, piatto.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 
     public double getPrezzo() {
@@ -35,5 +49,7 @@ public class Piatto {
     public String toString() {
         return getNome()+"\t€"+getPrezzo();
     }
+
+
 
 }
