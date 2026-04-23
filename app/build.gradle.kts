@@ -31,6 +31,7 @@ dependencies {
 
     implementation("org.hibernate.orm:hibernate-core:6.4.4.Final")
     implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
+
     implementation("com.h2database:h2:2.2.224")
 }
 
