@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
 repositories {
@@ -33,6 +34,16 @@ dependencies {
     implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
 
     implementation("com.h2database:h2:2.2.224")
+
+
+    implementation ("org.openjfx:javafx-controls:25.0.3")
+    implementation ("org.openjfx:javafx-fxml:25.0.3")
+    implementation ("org.openjfx:javafx-web:25.0.3")
+}
+
+javafx {
+    version = "25.0.3"
+    modules = listOf("javafx.controls", "javafx.fxml", "javafx.web")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -44,5 +55,5 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "it.unicam.mdp_mgc_2026.persistence.json.GsonParser"
+    mainClass = "it.unicam.mdp_mgc_2026.interfaccegrafiche.javafx.MVC_V"
 }
